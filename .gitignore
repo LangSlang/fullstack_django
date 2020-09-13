@@ -1,0 +1,23 @@
+*.egg-info
+*.pot
+*.py[co]
+*.py[cod]
+.tox/
+*.sqlite3
+vars
+
+# pycharm #
+__pycache__
+__pycache__/
+.idea
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+
+# Environments #
+.env
+.venv
+env/
+venv/
+ENV/
