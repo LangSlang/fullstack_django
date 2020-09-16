@@ -16,8 +16,12 @@ matrix:
 
     - language: node_js
       node_js:
-        - 4.8
-      before_script:
+        - 12.18.4
+      before_install:
         - cd FE
+      install:
+        - npm install
       script:
-        - npm test
+        - npm run test
+notifications:
+  email: false

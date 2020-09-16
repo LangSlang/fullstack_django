@@ -5,6 +5,7 @@
 .tox/
 *.sqlite3
 vars
+node_modules/
 
 # pycharm #
 __pycache__
