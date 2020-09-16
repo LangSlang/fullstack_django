@@ -29,6 +29,8 @@ matrix:
         - 7.4
       before_script:
         - cd PHP
+      script:
+        - phpunit tests
 
 notifications:
   email: false
