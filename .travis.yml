@@ -30,7 +30,7 @@ matrix:
       before_script:
         - cd PHP
       script:
-        - phpunit tests
+        - phpunit --configuration phpunit.xml --coverage-text
 
 notifications:
   email: false
