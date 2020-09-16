@@ -6,6 +6,5 @@ class test_1 extends TestCase
 	public function testCalculationOfMean()
 	{
         $this->assertEquals(4.4, 4.40);
-        $this->assertEquals(4.4, 4.44);
 	}
 }
