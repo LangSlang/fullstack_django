@@ -1,4 +1,4 @@
-class Test_1 extends TestCase
+class test_1 extends TestCase
 {
 	public function testCalculationOfMean()
 	{
