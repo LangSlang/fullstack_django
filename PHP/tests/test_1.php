@@ -1,4 +1,4 @@
-class AverageTest extends TestCase
+class Test_1 extends TestCase
 {
 	public function testCalculationOfMean()
 	{
