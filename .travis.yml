@@ -23,5 +23,12 @@ matrix:
         - npm install
       script:
         - npm run test
+
+    - language: php
+      php:
+        - 7.0
+      before_script:
+        - cd PHP
+
 notifications:
   email: false
