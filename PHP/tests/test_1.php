@@ -1,4 +1,6 @@
 <?php
+use PHPUnit\Framework\TestCase;
+
 class test_1 extends TestCase
 {
 	public function testCalculationOfMean()
