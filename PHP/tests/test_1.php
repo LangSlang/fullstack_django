@@ -1,3 +1,4 @@
+<?php
 class test_1 extends TestCase
 {
 	public function testCalculationOfMean()
