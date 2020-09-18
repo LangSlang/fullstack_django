@@ -10,7 +10,7 @@ class TestSamples(APITestCase):
         self.assertNotEqual(1, two)
 
     def test_two(self):
-        driver = webdriver.FireFox()
+        driver = webdriver.Firefox()
         driver.get("http://www.python.org")
         assert "Python" in driver.title
         elem = driver.find_element_by_name("q")
