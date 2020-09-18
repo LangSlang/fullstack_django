@@ -8,7 +8,10 @@ matrix:
         DJANGO_VERSION=2.2.6
       install:
         - pip install -r requirements.txt
-      #before_script:
+      before_script:
+        - wget http://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip
+        - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6/bin/
+        - export CHROME_BIN=chromium-browser
       #  - mysql -e 'create database mysite_db;'
       #  - python manage.py syncdb --noinput
       script:
