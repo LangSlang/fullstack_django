@@ -11,7 +11,7 @@ class TestSamples(APITestCase):
 
     def test_two(self):
         driver = webdriver.Firefox()
-        
+
         driver.get("http://alibadschool.com/")
         assert "Pakistani" in driver.title
 
@@ -21,5 +21,5 @@ class TestSamples(APITestCase):
         elem.clear()
         elem.send_keys("pycon")
         elem.send_keys(Keys.RETURN)
-        assert "No results found." in driver.page_source
+        assert "No results found." not in driver.page_source
         driver.close()
