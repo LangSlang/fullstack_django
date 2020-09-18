@@ -17,15 +17,15 @@ matrix:
       script:
         - python manage.py test
 
-    - language: node_js
-      node_js:
-        - 12.18.4
-      before_install:
-        - cd FE
-      install:
-        - npm install
-      script:
-        - npm run test
+    # - language: node_js
+    #   node_js:
+    #     - 12.18.4
+    #   before_install:
+    #     - cd FE
+    #   install:
+    #     - npm install
+    #   script:
+    #     - npm run test
 
     # - language: php
     #   php:
