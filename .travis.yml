@@ -1,3 +1,11 @@
+dist: bionic
+services:
+  - xvfb
+addons:
+  apt:
+    packages:
+      - libgtk-3-dev
+
 matrix:
   include:
     - language: python
@@ -9,9 +17,12 @@ matrix:
       install:
         - pip install -r requirements.txt
       before_script:
-        - wget http://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip
-        - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6/bin/
-        - export CHROME_BIN=chromium-browser
+        - wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
+        - tar -xzf geckodriver-v0.26.0-linux64.tar.gz -C bin
+        - export PATH=$(pwd)/bin:$PATH
+        # - wget http://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip
+        # - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6/bin/
+        # - export CHROME_BIN=chromium-browser
       #  - mysql -e 'create database mysite_db;'
       #  - python manage.py syncdb --noinput
       script:
