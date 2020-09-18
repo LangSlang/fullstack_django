@@ -8,29 +8,36 @@ matrix:
         DJANGO_VERSION=2.2.6
       install:
         - pip install -r requirements.txt
-      #before_script:
+      before_script:
+        echo $PATH
+        # - wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
+        # - tar -xzf geckodriver-v0.26.0-linux64.tar.gz -C bin
+        # - export PATH=$(pwd)/bin:$PATH
+        - wget http://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip
+        - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6.10/bin/
+        - export CHROME_BIN=chromium-browser
       #  - mysql -e 'create database mysite_db;'
       #  - python manage.py syncdb --noinput
       script:
         - python manage.py test
 
-    - language: node_js
-      node_js:
-        - 12.18.4
-      before_install:
-        - cd FE
-      install:
-        - npm install
-      script:
-        - npm run test
+    # - language: node_js
+    #   node_js:
+    #     - 12.18.4
+    #   before_install:
+    #     - cd FE
+    #   install:
+    #     - npm install
+    #   script:
+    #     - npm run test
 
-    - language: php
-      php:
-        - 7.4
-      before_script:
-        - cd PHP
-      script:
-        - phpunit --configuration phpunit.xml
+    # - language: php
+    #   php:
+    #     - 7.4
+    #   before_script:
+    #     - cd PHP
+    #   script:
+    #     - phpunit --configuration phpunit.xml
 
 notifications:
   email: false
